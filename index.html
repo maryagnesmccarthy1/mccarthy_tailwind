@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary's Tailwind Page</title>
+
+<!--This is added to load tailwind html code-->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+ <body>
+
+<!--ChatGPT help to change top border background color to purple-800
+to match footer color change and click here button-->
+
+<header class="bg-purple-800 shadow-md">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+
+  <!-- Logo -->
+     <!--ChatGPT help to change logo text to white-->
+
+   <!--ChatGPT help with changing text for logo from 2xl to xl for smaller text along with visible feature-->
+<a href="#" class="text-xl font-bold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+  Mary's Tailwind Page
+</a>
+
+  <!--ChatGPT help with menu button-->
+  <!--This update should now work with Javascript-->
+
+<!-- Desktop navigation link:
+Shows the Get Started link on tablet and desktop screens.
+Hidden on small screens so the mobile menu can take its place. -->
+<!--menu button shows blue background with white text for contrast. The blue button
+background matches header and card text. 
+for contrast-->
+<a href="#features"
+   class="hidden rounded-full bg-blue-800 px-5 py-2 text-white
+          hover:bg-blue-900 focus-visible:outline-2
+          focus-visible:outline-offset-2 focus-visible:outline-white
+          md:inline-block">
+  Get Started
+</a>
+
+<!--ChatGPT assistance with mobile menu. Also help with how to show feature cards.-->
+<!-- Mobile menu button:
+Appears on small screens and opens or closes the mobile navigation.
+aria-expanded tells screen readers whether the menu is open. -->
+<button id="menu-button"
+        type="button"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        class="rounded-full bg-blue-800 px-5 py-2 text-white
+               hover:bg-blue-900 focus-visible:outline-2
+               focus-visible:outline-offset-2 focus-visible:outline-white
+               md:hidden">
+  Menu
+</button>
+
+<!-- Mobile navigation:
+Starts hidden and is displayed when the Menu button is clicked.
+md:hidden keeps this menu off tablet and desktop screens. -->
+<div id="mobile-menu"
+     class="absolute left-0 right-0 top-16 z-10 hidden flex-col
+            bg-purple-800 px-6 py-4 text-white shadow-md md:hidden">
+  <a href="#features"
+     class="py-2 focus-visible:outline-2
+            focus-visible:outline-offset-2 focus-visible:outline-white">
+    Get Started
+  </a>
+  <a href="#features"
+     class="py-2 focus-visible:outline-2
+            focus-visible:outline-offset-2 focus-visible:outline-white">
+    Tailwind Features
+  </a>
+</div>
+</nav>
+
+
+</header>
+<!--ChatGPT help with changing hero to responsive-->
+<!--changed test-5xl to 3xl-->
+
+<!--ChatGPT help with placement of Main section-->
+<main>
+<section class="px-6 py-12 text-center">
+
+  <h1 class="text-3xl font-bold text-blue-900 md:text-5xl">
+      Welcome to Mary's Tailwind page.
+    </h1>
+
+    <p class="mx-auto mt-4 max-w-xl text-blue-900">
+      Tailwind helps simplify coding.
+    </p>
+
+  <!--button change color to purple.
+  Changed hover from blue to yellow changed number from 900 to 400 to 
+  make hover lighter shade-->
+
+  <!--ChatGPT help with making button more responsive for smaller screen-->
+<div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+    <a href="#features"
+       class="rounded-full bg-purple-800 px-6 py-3 text-white
+              hover:bg-yellow-400 focus-visible:outline
+              focus-visible:outline-2 focus-visible:outline-offset-2">
+      Click here
+    </a>
+
+    <!--Secondary button -->
+    <!--ChatGPT helped with second button code-->
+<a href="#features"
+   class="rounded-full border-2 border-purple-800 px-6 py-3 text-purple-800 hover:bg-yellow-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800">
+  Tailwind Facts
+</a>
+  </div>
+</section>
+
+
+
+
+
+<!--ChatGPT help with adding title for cards, I adjusted the original suggested code
+using the header code for centering the card section heading-->
+<section id="features" class="px-6 py-12">
+
+  <h2 class="mb-6 text-center text-2xl font-bold text-blue-900">
+    Interesting Facts about Tailwind
+  </h2>
+
+
+<!--class code featured card gird-->
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+
+<!--Changed card background to yellow 200 and text blue-900-->
+<!--ChatGPT help with having link go to another site. Using W3Schools as link destination-->
+  <!--Card 1-->
+<article class="rounded-2xl border border-slate-200 bg-yellow-200 p-6">
+  <h3 class="text-lg font-semibold text-blue-900">Tailwind Fact One</h3>
+  <p class="mt-2 text-blue-900">Tailwind is a simpler form of CSS that allows you to design a page without leaving your HTML page.</p>
+
+  <a href="https://www.w3schools.com/"
+     class="mt-3 inline-block font-semibold text-blue-900 underline focus-visible:outline-2 focus-visible:outline-offset-2">
+    Click to learn more from W3Schools. 
+  </a>
+</article>
+
+
+   <!--Card 2-->
+<article class="rounded-2xl border border-slate-200 bg-yellow-200 p-6">
+  <h3 class="text-lg font-semibold text-blue-900">Tailwind Fact Two</h3>
+  <p class="mt-2 text-blue-900">Tailwind can be very useful for a simple webpage that does not need a lot of complex design details.</p>
+
+  <a href="https://www.w3schools.com/"
+     class="mt-3 inline-block font-semibold text-blue-900 underline focus-visible:outline-2 focus-visible:outline-offset-2">
+    Click to learn more from W3Schools. 
+  </a>
+</article>
+
+<!--ChatGPT help with link destination going to W3Schools for working link-->
+<!--Card 3-->
+<article class="rounded-2xl border border-slate-200 bg-yellow-200 p-6">
+  <h3 class="text-lg font-semibold text-blue-900">Tailwind Fact Three</h3>
+  <p class="mt-2 text-blue-900">Having the code on one page simplifies creating and editing.</p>
+
+  <a href="https://www.w3schools.com/"
+     class="mt-3 inline-block font-semibold text-blue-900 underline focus-visible:outline-2 focus-visible:outline-offset-2">
+    Click to learn more from W3Schools. 
+  </a>
+</article>
+
+   <!--Card 4-->
+<article class="rounded-2xl border border-slate-200 bg-yellow-200 p-6">
+  <h3 class="text-lg font-semibold text-blue-900">Tailwind Fact Four</h3>
+  <p class="mt-2 text-blue-900">Tailwind is becoming increasingly more popular among businesses.</p>
+
+  <a href="https://www.w3schools.com/"
+     class="mt-3 inline-block font-semibold text-blue-900 underline focus-visible:outline-2 focus-visible:outline-offset-2">
+    Click to learn more from W3Schools. 
+  </a>
+</article>
+
+ <!--ChatGPT help with closing tags so footer will fit across page-->
+
+  </div> <!-- Closes the grid -->
+</section> <!-- Closes the features section -->
+</main>
+
+<!--ChatGPT with footer code and making it fit across page-->
+<!-- Footer color matching header and click here button with color purple-800 -->
+<footer class="bg-purple-800 px-6 py-6 text-center text-white">
+  <!--ChatGPT help with footer links-->
+<nav aria-label="Footer navigation" class="mb-4">
+    <a href="#" class="mx-3 underline focus-visible:outline-2 focus-visible:outline-offset-2">
+      Home
+    </a>
+
+    <a href="#features" class="mx-3 underline focus-visible:outline-2 focus-visible:outline-offset-2">
+      Features
+    </a>
+  </nav>
+
+
+
+  <p>&copy; 2026 Mary McCarthy</p>
+</footer>
+
+<!--ChatGPT help with Javascript-->
+
+<!-- Mobile menu JavaScript:
+Opens and closes the menu on smaller screens.
+Updates aria-expanded for screen reader accessibility. -->
+<script>
+  // Select the menu button and navigation links.
+  const menuButton = document.getElementById("menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  // Open or close the menu when the button is clicked.
+  menuButton.addEventListener("click", function () {
+
+    // Toggle the menu's visibility.
+    const isHidden = mobileMenu.classList.toggle("hidden");
+
+    // Display the links vertically when visible.
+    mobileMenu.classList.toggle("flex", !isHidden);
+
+    // Update the accessible menu state.
+    menuButton.setAttribute("aria-expanded", String(!isHidden));
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
